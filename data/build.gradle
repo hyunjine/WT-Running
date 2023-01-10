@@ -43,9 +43,6 @@ dependencies {
     androidTestImplementation deps.ext_junit
     androidTestImplementation deps.espresso
 
-    // MultiDex
-    implementation deps.mutidex
-
     // RxJava
     implementation deps.rx.java
 
@@ -60,4 +57,7 @@ dependencies {
     // Hilt
     implementation deps.hilt.runtime
     kapt deps.hilt.compiler
+
+    // Firebase
+    implementation platform (deps.firebase.bom)
 }
