@@ -13,4 +13,6 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "WT-Running"
-include ':app'
+include ':presenter'
+include ':data'
+include ':domain'
