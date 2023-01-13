@@ -23,7 +23,7 @@ abstract class BaseActivity<T : ViewDataBinding>(
         binding = DataBindingUtil.setContentView(this, layoutId)
         binding.lifecycleOwner = this
 
-        navController = (supportFragmentManager.findFragmentById(containerId) as NavHostFragment).navController
+//        navController = (supportFragmentManager.findFragmentById(containerId) as NavHostFragment).navController
     }
 
     protected fun showToast(@StringRes strId: Int) {

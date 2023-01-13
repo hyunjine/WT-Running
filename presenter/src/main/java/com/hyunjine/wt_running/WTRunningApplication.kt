@@ -5,6 +5,7 @@ import android.util.Log
 import com.google.firebase.FirebaseApp
 import com.google.firebase.crashlytics.ktx.crashlytics
 import com.google.firebase.ktx.Firebase
+import com.naver.maps.map.NaverMapSdk
 import dagger.hilt.android.HiltAndroidApp
 import io.reactivex.exceptions.UndeliverableException
 import io.reactivex.plugins.RxJavaPlugins
@@ -17,6 +18,7 @@ class WTRunningApplication: Application() {
         super.onCreate()
         setFireBase()
         setRxJava()
+        setNaverMap()
     }
 
     private fun setFireBase() {
@@ -55,5 +57,10 @@ class WTRunningApplication: Application() {
             }
             Log.w("Undeliverable exception received, not sure what to do", error)
         }
+    }
+
+    private fun setNaverMap() {
+        NaverMapSdk.getInstance(this).client =
+            NaverMapSdk.NaverCloudPlatformClient(BuildConfig.NAVER_MAP_CLIENT_ID)
     }
 }

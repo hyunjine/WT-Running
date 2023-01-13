@@ -26,7 +26,7 @@ versions.navigation = "2.5.3"
 versions.hilt = "2.44"
 versions.room = "2.4.3"
 versions.firebase = "31.1.1"
-
+versions.naver_map = "3.16.1"
 versions.junit = "4.13.2"
 versions.atsl_junit = "1.1.5"
 versions.espresso = "3.5.1"
@@ -100,5 +100,8 @@ def firebase = [:]
 firebase.bom = "com.google.firebase:firebase-bom:$versions.firebase"
 firebase.analytics = "com.google.firebase:firebase-analytics-ktx"
 deps.firebase = firebase
+
+/* Naver */
+deps.naver_map = "com.naver.maps:map-sdk:$versions.naver_map"
 
 ext.deps = deps
